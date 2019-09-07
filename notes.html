@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="popup.ico" />
+    <title>UI Events Recorder</title>
+    <style>
+      *{
+        outline: 0;
+      }
+      body{
+        font-size: 20px;
+      }
+      #myTable {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top:72px;
+      }
+
+      #myTable td, #myTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+      #myTable tr:hover {background-color: #ddd;}
+
+      #myTable thead tr th {
+        text-transform: capitalize;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4267b2;
+        color: white;
+      }
+      header span{
+        font-size: 3rem;
+        color:#4267b2;
+        font-weight: 600;
+      }
+      header{
+        top:0;
+        width: 100%;
+        position: fixed;
+        background: white;
+      }
+      .button{
+        margin: 20px;
+        top:5px;
+        background-color: white; /* Green */
+        border: none;
+        padding: 5px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 50px;
+        cursor: pointer;
+        z-index: 99999;
+        text-transform: uppercase;
+      }
+      .save:hover{
+        background: #4CAF50;
+        color:white;
+      }
+      .download:hover{
+        background: red;
+        color:white;
+      }
+      .save:active{
+        background: rgb(55, 128, 57);
+        color:white;
+      }
+      .download:active{
+        background: rgb(195, 0, 0);
+        color:white;
+      }
+      header div{
+        top: 10px;
+        right:20px;
+        float: right;
+      }
+      header span img{
+        transform: translateY(12px);
+      }
+      .save{
+        color: #4CAF50;;
+        border: 2px solid #4CAF50;;
+      }
+      .download{
+        color: red;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <span><img src="./popup.svg" height="60px" /> UI Events </span>
+        <div>
+          <button class="button save" >Save</button>
+          <a id='download' class="button download" >Download</a>
+        </div>
+    </header>
+    <table id="myTable">
+      <thead>
+        <th>type</th>
+        <th>timestamp</th>
+        <th>value</th>
+        <th>location</th>
+        <th>event</th>
+      </thead>
+    </table>
+    <script src="./notes.js" ></script>
+</body>
+</html>

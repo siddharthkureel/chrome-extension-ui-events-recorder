@@ -44,22 +44,23 @@
         font-weight: 600;
       }
       header{
+        display: inline-block;
         top:0;
         width: 100%;
         position: fixed;
         background: white;
       }
       .button{
-        margin: 20px;
-        top:5px;
+        margin: 1rem;
+        top:0.2rem;
         background-color: white; /* Green */
         border: none;
-        padding: 5px 32px;
+        padding: 0.3rem 2rem;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
-        border-radius: 50px;
+        font-size: 1rem;
+        border-radius: 3rem;
         cursor: pointer;
         z-index: 99999;
         text-transform: uppercase;
@@ -86,6 +87,7 @@
         float: right;
       }
       header span img{
+        height: 60px;
         transform: translateY(12px);
       }
       .save{
@@ -96,13 +98,38 @@
         color: red;
         border: 2px solid red;
       }
+      @media only screen and (max-width: 702px) {
+        html,body{
+          font-size: 100%;
+        }
+        .button{
+          padding: 0.1rem 1rem;
+          font-size: 1rem;
+        }
+        header span{
+          font-size:1.5rem
+        }
+        header span img{
+          height: 30px;
+        }
+      }
+      @media only screen and (max-width: 462px) {
+        #myTable {
+          margin-top: 100px;
+        }
+      }
+      @media only screen and (max-width: 310px) {
+        #myTable {
+          margin-top: 150px;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
-        <span><img src="./popup.svg" height="60px" /> UI Events </span>
+        <span><img src="./popup.svg" /> UI Events </span>
         <div>
-          <button class="button save" >Save</button>
+          <button id="save" class="button save" >save</button>
           <a id='download' class="button download" >Download</a>
         </div>
     </header>

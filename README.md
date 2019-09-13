@@ -57,3 +57,6 @@ Download the script as Json
 Errors
 1) You may see errors when you got to chrome://extensions/ in ui recorder window.
 2) You can clear the errors by clicking on errors box and clear all on next window.
+
+Thank You.
+Author: Siddharth Kureel.

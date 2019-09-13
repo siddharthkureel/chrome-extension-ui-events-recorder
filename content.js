@@ -1,9 +1,12 @@
 document.querySelector('body').addEventListener('click', (event) => {
-    console.log(event)
     let array = []
     event.path.forEach((element) => {
         array.push(element.localName)
     });
+    let id = event.path.pop();
+    if (id.name !== '') {
+        array.push(id.name)
+    }
     const hierarchy = array.filter(i => i !== undefined)
     if (((event.target.localName === 'button') || (event.target.localName === 'div') || (event.target.localName === 'span')) && (event.target.childElementCount === 0)) {
         let occurrance = {

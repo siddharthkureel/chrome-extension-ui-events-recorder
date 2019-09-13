@@ -1,4 +1,5 @@
 document.querySelector('body').addEventListener('click', (event) => {
+    console.log(event)
     let array = []
     event.path.forEach((element) => {
         array.push(element.localName)
@@ -45,6 +46,7 @@ document.querySelector('body').addEventListener('click', (event) => {
                 let occurrance = {
                     type: 'Password',
                     timeStamp: new Date(),
+                    frame: hierarchy,
                     value: '********',
                     location: window.location.href,
                     event: 'input',
@@ -58,6 +60,7 @@ document.querySelector('body').addEventListener('click', (event) => {
                 let occurrance = {
                     type: e.target.id,
                     timeStamp: new Date(),
+                    frame: hierarchy,
                     value: e.target.value,
                     location: window.location.href,
                     event: 'input',
@@ -70,6 +73,7 @@ document.querySelector('body').addEventListener('click', (event) => {
                 let occurrance = {
                     type: e.target.name,
                     timeStamp: new Date(),
+                    frame: hierarchy,
                     value: e.target.value,
                     location: window.location.href,
                     event: 'input',
@@ -93,6 +97,11 @@ document.querySelector('body').addEventListener('click', (event) => {
 })
 //when user press tab key
 document.querySelector('body').addEventListener('keyup', (event) => {
+    let array = []
+    event.path.forEach((element) => {
+        array.push(element.localName)
+    });
+    const hierarchy = array.filter(i => i !== undefined)
     if (event.which === 9) {
         if (event.target.localName === 'input') {
             if (event.target.type === 'password') {

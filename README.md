@@ -1,5 +1,4 @@
 # chrome-extension-ui-events-recorder
-v 2.2.1
 
 Installation
 1) Open chrome . 

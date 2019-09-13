@@ -12,32 +12,26 @@
     * {
       outline: 0
     }
-
     body {
-      font-size: 20px
+      font-size: 16px
     }
-
     #myTable {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       border-collapse: collapse;
       width: 100%;
       margin-top: 72px
     }
-
     #myTable td,
     #myTable th {
       border: 1px solid #ddd;
       padding: 8px
     }
-
     #myTable tr:nth-child(even) {
       background-color: #f2f2f2
     }
-
     #myTable tr:hover {
       background-color: #ddd
     }
-
     #myTable thead tr th {
       text-transform: capitalize;
       padding-top: 12px;
@@ -46,13 +40,11 @@
       background-color: #4267b2;
       color: white
     }
-
     header span {
       font-size: 3rem;
       color: #4267b2;
       font-weight: 600
     }
-
     header {
       display: inline-block;
       top: 0;
@@ -61,7 +53,6 @@
       background: white;
       box-shadow: 0 2px 0px 0 rgba(0,0,0,0.16);
     }
-
     .button {
       margin: 1rem;
       top: 0.2rem;
@@ -77,17 +68,14 @@
       z-index: 99999;
       text-transform: uppercase
     }
-
     .save:hover {
       background: #4CAF50;
       color: white
     }
-
     .download:hover {
       background: red;
       color: white
     }
-
     .save:active {
       background: rgb(55, 128, 57);
       color: white
@@ -154,7 +142,6 @@
     }
   </style>
 </head>
-
 <body>
   <header> <span><img src="./popup.svg" /> UI Events </span>
     <div> <button id="save" class="button save">save</button> <a id='download' class="button download">Download</a>
@@ -164,6 +151,7 @@
     <thead>
       <th>type</th>
       <th>timestamp</th>
+      <th>frame</th>
       <th>value</th>
       <th>location</th>
       <th>event</th>
@@ -171,5 +159,4 @@
   </table>
   <script src="./notes.js"></script>
 </body>
-
 </html>

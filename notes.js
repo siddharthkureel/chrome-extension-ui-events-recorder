@@ -12,11 +12,13 @@ chrome.runtime.onMessage.addListener(
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
         cell1.innerHTML = request.type
         cell2.innerHTML = request.timeStamp
-        cell3.innerHTML = request.value
-        cell4.innerHTML = request.location
-        cell5.innerHTML = request.event
+        cell3.innerHTML = request.frame
+        cell4.innerHTML = request.value
+        cell5.innerHTML = request.location
+        cell6.innerHTML = request.event
     }
 );
 document.querySelector('#download').addEventListener('click', function () {

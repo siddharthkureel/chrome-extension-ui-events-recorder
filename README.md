@@ -6,7 +6,7 @@ Installation
 2) Go to chrome://extensions/ 
 3) Turn on developer mode on top right corner. 
 4) Click on load unpacked and select the folder chrome extension containing content.js or manifest.json etc... files. 
-5) Now the you can see the extension installed.
+5) Now you can see the extension installed.
 
 After Installation 
 1) Left click on ui-extension . 

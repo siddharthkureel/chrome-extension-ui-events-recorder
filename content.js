@@ -4,8 +4,19 @@ document.querySelector('body').addEventListener('click', (event) => {
     let hierarchy = 'Main body';
     if (id.name !== '') {
         hierarchy = id.name;
-    }
-    if (((event.target.localName === 'button') || (event.target.localName === 'div') || (event.target.localName === 'span')) && (event.target.childElementCount === 0)) {
+    } 
+    if ((event.target.ownerDocument.activeElement.localName === 'a') || ((event.target.ownerDocument.activeElement.localName === 'paper-item')) && (event.target.childElementCount >= 0)) {
+        let occurrance = {
+            type: 'a',
+            timeStamp: new Date(),
+            frame: hierarchy,
+            value: event.target.ownerDocument.activeElement.href,
+            location: window.location.href,
+            event: 'click',
+        }
+        chrome.runtime.sendMessage(occurrance, function (response) {
+        });
+    } else if (((event.target.localName === 'button') || (event.target.localName === 'div') || (event.target.localName === 'span')) && (event.target.childElementCount === 0)) {
         let occurrance = {
             type: event.target.localName,
             timeStamp: new Date(),
@@ -14,18 +25,6 @@ document.querySelector('body').addEventListener('click', (event) => {
             location: window.location.href,
             event: 'click',
         }
-        chrome.runtime.sendMessage(occurrance, function (response) {
-        });
-    } else if ((event.target.ownerDocument.activeElement.localName === 'a') || ((event.target.ownerDocument.activeElement.localName === 'paper-item')) && (event.target.childElementCount > 0)){
-        let occurrance = {
-            type: 'a',
-            timeStamp: new Date(),
-            frame:hierarchy,
-            value: event.target.ownerDocument.activeElement.href,
-            location: window.location.href,
-            event: 'click',
-        }
-        
         chrome.runtime.sendMessage(occurrance, function (response) {
         });
     }

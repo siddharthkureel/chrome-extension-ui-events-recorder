@@ -77,11 +77,11 @@ document.querySelector('body').addEventListener('click', (event) => {
 })
 //when user press tab key
 document.querySelector('body').addEventListener('keyup', (event) => {
-    let array = []
-    event.path.forEach((element) => {
-        array.push(element.localName)
-    });
-    const hierarchy = array.filter(i => i !== undefined)
+    let id = event.path.pop();
+    let hierarchy = 'Main body';
+    if (id.name !== '') {
+        hierarchy = id.name;
+    } 
     if (event.which === 9) {
         if (event.target.localName === 'input') {
             if (event.target.type === 'password') {

@@ -1,7 +1,7 @@
 {
     "manifest_version" : 2,
     "name" : "ui-events-recorder",
-    "version" : "2.2.4",
+    "version" : "2.3.5",
     "permissions": [
         "tabs",
         "activeTab",

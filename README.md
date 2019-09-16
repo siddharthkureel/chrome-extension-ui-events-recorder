@@ -1,4 +1,7 @@
 # chrome-extension-ui-events-recorder
+Download
+1) Download the compressed file from github.
+2) Unzip the files
 
 Installation
 1) Open chrome . 
@@ -23,17 +26,14 @@ Key Points
 2) Even switching between new URLs, please wait for the page to be loaded completely 
 3) Make sure the ui-event window is also open.
 
-Password as Input event
-1) Password is dashed to static value rather than hashing to improve the speed of the script.
-2) Password will not be displayed to anyone
-
 Click Event
 1) The Event handler will grab the clicked fields such as link, button very precisely all over the page. 
 2) Adjacent point 1 is improved as the event handler grabs other elements such as img, div, span, h1 with their inner text. 
 Provided their children nodes to be 0.
-3) Value may be empty if there is no value specified by the site itself or the children is not text or may contain another 
-element as child. 
-For Example: <a> <img><div></div></a> As You see above a link tag “a” is containing other children tag where text value is empty.
+
+Password as Input event
+1) Password is dashed to static value rather than hashing to improve the speed of the script.
+2) Password will not be displayed to anyone
 
 Input Event
 1) The Event handler will grab input value by ID when user click on input field and type something. 

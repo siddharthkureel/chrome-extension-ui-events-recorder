@@ -1,5 +1,4 @@
 document.querySelector('body').addEventListener('click', (event) => {
-   
     let id = event.path.pop();
     let hierarchy = 'Main body';
     if (id.name !== '') {
